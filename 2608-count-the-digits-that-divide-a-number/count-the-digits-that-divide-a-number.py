@@ -4,10 +4,11 @@ class Solution(object):
         :type num: int
         :rtype: int
         """
-        newn,c=num,0
-        while newn>0:
-            n=newn%10
-            if num%n==0:
-                c+=1
-            newn//=10
-        return c
+        x = num
+        ans = 0
+        while x>0:
+            dig = x%10
+            if num%dig == 0:
+                ans += 1
+            x = x//10
+        return ans
