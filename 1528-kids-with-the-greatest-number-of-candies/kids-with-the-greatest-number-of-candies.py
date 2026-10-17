@@ -6,8 +6,7 @@ class Solution(object):
         :rtype: List[bool]
         """
         ans=[]
-        x=sorted(candies)
-        high=x[len(x)-1]
+        high=max(candies)
         for i in range(len(candies)):
             if candies[i]+extraCandies>=high:
                 res=True
