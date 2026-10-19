@@ -4,13 +4,12 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        if n==1:
+        if n<=0:
+            return False
+        temp=n
+        while temp%3==0:
+            temp//=3
+        if temp==1:
             return True
-        if n ==3:
-            return True
-        if n > 3:
-            if n % 3 == 0:
-                ans= n // 3
-                return self.isPowerOfThree(ans)
-        return False
-        
+        else:
+            return False
