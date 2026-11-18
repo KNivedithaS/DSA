@@ -4,12 +4,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        sum1=0
-        for x in nums:
-            if x<10:
-                sum1+=x
+        x,y=0,0
+        for i in nums:
+            if i>9:
+                x+=i
             else:
-                sum1-=x
-        if sum1!=0:
+                y+=i
+        if x>y or y>x:
             return True
-        return False
+        else:
+            return False
