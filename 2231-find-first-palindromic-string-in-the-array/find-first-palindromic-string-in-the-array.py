@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: str
         """
         for x in words:
-            st=x
-            if x==st[::-1]:
-                return st
+            if x==x[::-1]:
+                return x
         return '' 
