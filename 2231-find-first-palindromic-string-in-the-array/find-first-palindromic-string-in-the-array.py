@@ -4,7 +4,11 @@ class Solution(object):
         :type words: List[str]
         :rtype: str
         """
-        for x in words:
-            if x==x[::-1]:
-                return x
-        return '' 
+        ans=""
+        for i in words:
+            str=i[::-1]
+            if(str==i):
+                ans=i
+                break
+        return ans
+        
