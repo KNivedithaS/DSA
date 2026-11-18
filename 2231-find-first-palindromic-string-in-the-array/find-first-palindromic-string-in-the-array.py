@@ -6,6 +6,6 @@ class Solution(object):
         """
         for x in words:
             st=x
-            if st[::]==st[::-1]:
+            if x==st[::-1]:
                 return st
         return '' 
