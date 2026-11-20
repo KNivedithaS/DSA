@@ -4,8 +4,9 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        s,c=lower(s),0
-        for i in range(len(s)-1):
-            if s[i]!=s[i+1]:
-                c+=1
-        return c
+        count = 0
+        s = s.lower()
+        for i in range(1,len(s)):
+            if s[i] != s[i-1]:
+                count +=1
+        return count
