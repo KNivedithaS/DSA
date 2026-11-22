@@ -5,9 +5,9 @@ class Solution(object):
         :rtype: int
         """
         m=0
-        for i in range(len(accounts)):
+        for i in accounts:
             sum=0
-            for j in accounts[i]:
+            for j in i:
                 sum+=j
             m=max(sum,m)
         return m
